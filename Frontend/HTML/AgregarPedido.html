@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar impuestos</title>
+    <link rel="stylesheet" href="../CSS/Inicio.css">
+</head>
+<body style="background-color: #DDD;">
+    <div class="container">
+        <a href="Inicio.html" class="logo">Inicio</a>
+        <nav>
+            <ul>                    
+                <li><a href="ListaClientes.html">Clientes</a></li>
+                <li><a href="ListaPedido.html">Pedidos</a></li>
+                <li><a href="Bienes.html">Bienes</a></li>
+                <li><a href="ListaImpuestos.html">Impuestos</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <form id="registroPedido">
+            <h1>Registrar pedido</h1>
+            <div class="cliente_pedido">
+                <label for="lista_clientes">Clientes:</label>
+                <select id="lista_clientes">
+                    <option value="">Seleccione un cliente</option>
+                </select>
+            </div><br>
+            <div class="producto_pedido">
+                <label for="lista_productos">Productos:</label>
+                <select id="lista_productos">
+                    <option value="">Seleccione uno o varios productos</option>
+                </select>
+            </div><br>
+            <div class="servicio_pedido">
+                <label for="lista_servicios">Servicios:</label>
+                <select id="lista_servicios">
+                    <option value="">Seleccione uno o varios servicios</option>
+                </select>
+            </div>
+            <a href="ListaPedido.html"><button type="button" id="cancelar">Cancelar</button></a>
+            <button type="submit" id="guardar">Guardar</button>
+        </form>
+    </div>
+    <script src="../JS/AgregarPedido.js"></script>
+</body>
+</html>

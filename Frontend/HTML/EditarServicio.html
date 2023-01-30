@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cliente Final</title>
+    <link rel="stylesheet" href="../CSS/Inicio.css">
+</head>
+<body onload="findInfoClient()" style="background-color: #DDD;">
+    <div class="container">
+        <a href="Inicio.html" class="logo">Inicio</a>
+        <nav>
+            <ul>                    
+                <li><a href="ListaClientes.html">Clientes</a></li>
+                <li><a href="ListaPedido.html">Pedidos</a></li>
+                <li><a href="Bienes.html">Bienes</a></li>
+                <li><a href="ListaImpuestos.html">Impuestos</a></li>
+            </ul>
+        </nav> 
+    </div>
+    <div class="container" onload="console.log(0)">
+        <form id="editarServicio">
+            <h1>Editar servicio</h1>
+            <input type="text" placeholder="Servicio" id="servicio" required>
+            <input type="text" placeholder="Precio" id="precio" required>
+            <input type="text" placeholder="Cargo soporte" id="cargo_soporte" required>
+            <a href="ListaServicios.html"><button type="button" id="cancelar">Cancelar</button></a>
+            <button type="submit" id="guardar">Guardar</button>
+        </form>
+    </div>
+    <script src="../JS/EditarServicio.js"></script>
+</body>
+</html>

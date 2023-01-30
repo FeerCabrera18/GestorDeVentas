@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Editar cliente</title>
+    <link rel="stylesheet" href="../CSS/Inicio.css">
+</head>
+<body onload="findInfoClient()" style="background-color: #DDD;">
+    <div class="container">
+        <a href="Inicio.html" class="logo">Inicio</a>
+        <nav>
+            <ul>                    
+                <li><a href="ListaClientes.html">Clientes</a></li>
+                <li><a href="ListaPedido.html">Pedidos</a></li>
+                <li><a href="Bienes.html">Bienes</a></li>
+                <li><a href="ListaImpuestos.html">Impuestos</a></li>
+            </ul>
+        </nav> 
+    </div>
+    <div class="container" onload="console.log(1)">
+        <form id="editarCliente">
+            <h1>Editar cliente</h1>
+            <input type="text" placeholder="Nombre" id="nombre" required>
+            <input type="text" placeholder="Apellido" id="apellido" required>
+            <input type="text" placeholder="DNI" id="DNI" required>
+            <input type="text" placeholder="Dirección" id="direccion" required>
+            <input type="email" placeholder="Email" id="email" required>
+            <input type="text" placeholder="Teléfono" id="telefono" required>
+            <a href="../HTML/ListaClientes.html"><button type="button" id="cancelar">Atras</button></a>
+            <!-- <button type="button" id="cargarLista">Cargar Lista</button> -->
+            <button type="submit" id="guardar">Guardar</button>   
+        </form>
+    </div> 
+    <script src="../JS/EditarCliente.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Empresa</title>
+    <link rel="stylesheet" href="../CSS/Inicio.css">
+</head>
+<body style="background-color: #DDD;">
+    <div class="container">
+        <a href="Inicio.html" class="logo">Inicio</a>
+        <nav>
+            <ul>                    
+                <li><a href="ListaClientes.html">Clientes</a></li>
+                <li><a href="ListaPedido.html">Pedidos</a></li>
+                <li><a href="Bienes.html">Bienes</a></li>
+                <li><a href="ListaImpuestos.html">Impuestos</a></li>
+            </ul>
+        </nav> 
+    </div>
+    <div class="container">
+        <h1>Registrar empresa</h1>
+        <form id="registroEmpresa">
+            <input type="text" placeholder="Razon social" id="razon_social">
+            <input type="text" placeholder="CUIT" id="CUIT">
+            <input type="date" placeholder="Fecha inicio actividad" id="fecha_inicio">
+            <input type="text" placeholder="Nombre" id="nombre" required>
+            <input type="text" placeholder="Apellido" id="apellido" required>
+            <input type="text" placeholder="DNI" id="DNI" required>
+            <input type="text" placeholder="Dirección" id="direccion" required>
+            <input type="email" placeholder="Email" id="email" required>
+            <input type="text" placeholder="Teléfono" id="telefono" required>
+            <a href="AgregarClientes.html"><button type="button" id="cancelar">Cancelar</button></a>
+            <button type="submit" id="guardar">Guardar</button> 
+        </form>
+    </div>
+    <script src="../JS/AgregarEmpresa.js"></script>
+</body>
+</html>

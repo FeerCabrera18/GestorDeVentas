@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Editar impuesto</title>
+    <link rel="stylesheet" href="../CSS/Inicio.css">
+</head>
+<body onload="findInfoClient()" style="background-color: #DDD;">
+    <div class="container">
+        <a href="Inicio.html" class="logo">Inicio</a>
+        <nav>
+            <ul>                    
+                <li><a href="ListaClientes.html">Clientes</a></li>
+                <li><a href="ListaPedido.html">Pedidos</a></li>
+                <li><a href="Bienes.html">Bienes</a></li>
+                <li><a href="ListaImpuestos.html">Impuestos</a></li>
+            </ul>
+        </nav> 
+    </div>
+    <div class="container" onload="console.log(1)">
+        <form id="editarImpuesto">
+            <h1>Editar impuesto</h1>
+            <input type="text" placeholder="Nombre impuesto" id="nombreImpuesto" required>
+            <input type="text" placeholder="Porcentaje" id="porcentaje" required>
+            <a href="ListaImpuestos.html"><button type="button" id="cancelar">Atras</button></a>
+            <button type="submit" id="guardar">Guardar</button>
+        </form>
+    </div> 
+    <script src="../JS/EditarImpuesto.js"></script>
+</body>
+</html>
