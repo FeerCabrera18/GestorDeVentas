@@ -44,9 +44,6 @@ public class Pedido {
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-    @OneToMany(
-            fetch = FetchType.LAZY,
-            cascade = CascadeType.MERGE
-    )
-    List<Detalle_pedido> detalle_pedidos;
+    @ManyToMany
+    Set<Detalle_pedido> detalle_pedidos;
 }

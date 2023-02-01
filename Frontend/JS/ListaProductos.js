@@ -44,4 +44,4 @@ function validar(campo) {
         cuilvalidado = ""
     }
     return cuilvalidado;
-} 
+}

@@ -55,3 +55,32 @@ fetch(url_servicios)
 .then (data => cargarServicio(data))
 .then (data => console.log(data))
 .catch (error => console.log(error))
+
+//Agrega formulario de carga de pedido
+const form  = document.getElementById('registroPedido');
+const registroBtn = document.querySelector("#guardar");
+
+function registro(){ 
+    const link = 'http://localhost:8080/pedido/crearPedido'
+    const data = {
+        fecha: form.elements['fecha_pedido'].value,
+        nro_comprobante: form.elements['comprobante'].value,
+        empresa_emisora: form.elements['empresa_emisora'].value,
+        total_pedido: form.elements['total_pedido'].value,
+        cliente: form.elements['lista_clientes'].value,
+        detalle_pedidos: form.elements['lista_productos'].value,
+        detalle_pedidos: form.elements['lista_servicios'].value
+    };
+    const response = fetch(link, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        window.location.href = "../HTML/ListaProductos.html";
+    alert("Producto registrado");
+}
+registroBtn.addEventListener("click", registro);

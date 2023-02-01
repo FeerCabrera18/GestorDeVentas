@@ -20,6 +20,26 @@
     <div class="container">
         <form id="registroPedido">
             <h1>Registrar pedido</h1>
+            <input 
+                type="date" 
+                placeholder=""
+                id="fecha_pedido"
+                required>
+            <input 
+                type="text" 
+                placeholder="Comprobante N°"
+                id="comprobante"
+                required>
+            <input 
+                type="text" 
+                placeholder="Empresa emisora"
+                id="empresa_emisora"
+                required>
+            <input 
+                type="text" 
+                placeholder="Total pedido"
+                id="total_pedido"
+                required>
             <div class="cliente_pedido">
                 <label for="lista_clientes">Clientes:</label>
                 <select id="lista_clientes">
@@ -28,13 +48,13 @@
             </div><br>
             <div class="producto_pedido">
                 <label for="lista_productos">Productos:</label>
-                <select id="lista_productos">
+                <select multiple id="lista_productos">
                     <option value="">Seleccione uno o varios productos</option>
                 </select>
             </div><br>
             <div class="servicio_pedido">
                 <label for="lista_servicios">Servicios:</label>
-                <select id="lista_servicios">
+                <select multiple id="lista_servicios">
                     <option value="">Seleccione uno o varios servicios</option>
                 </select>
             </div>

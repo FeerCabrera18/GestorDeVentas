@@ -32,4 +32,10 @@ public class Producto {
     private String producto;
     @Column(name = "precio")
     private BigDecimal precio;
+
+    /*@OneToMany(
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.MERGE
+    )
+    List<Impuesto> impuestos;*/
 }
