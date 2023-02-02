@@ -82,3 +82,10 @@ function registro(){
     alert("Producto registrado");
 }
 registroBtn.addEventListener("click", registro);
+
+//Agrega formulario de carga de detalle
+const form1  = document.getElementById('registroPedido');
+const registroBtn1 = document.querySelector("#guardar");
+function agregarDetalle(){
+
+}
