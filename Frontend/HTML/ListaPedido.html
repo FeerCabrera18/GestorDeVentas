@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Inicio</title>
     <link rel="stylesheet" href="../CSS/Inicio.css">
+    <link href="../CSS/popup.css" rel="stylesheet" type="text/css" />
 </head>
 <body style="background-color: #DDD;">
     <div class="container">
@@ -32,6 +33,31 @@
             <tbody>
             </tbody>
         </table>
+    </div>
+
+    <div id="popup" class="overlay">
+        <div id="popupBody">
+            <h2>Detalle del Pedido</h2>
+            <a id="cerrar" href="#">&times;</a>
+            <div class="popupContent">
+                <!-- <table>
+                    <tHead>
+                        <tr>
+                            <th id="th_cantidad">Cantidad</th>
+                            <th>Precio de venta</th>
+                            <th>Subtotal</th>
+                            <th>Producto</th>
+                            <th>Servicio</th>
+                        </tr>
+                    </tHead>
+                </table> -->
+                <h3 id="id_cantidad">Cantidad:</h3>
+                <h3 id="id_precio_venta">Precio de venta:</h3>
+                <h3 id="id_Subtotal">Subtotal:</h3>
+                <h3 id="id_Producto">Producto:</h3>
+                <h3 id="id_Servicio">Servicio:</h3>
+            </div>
+        </div>
     </div>
     <div class="boton">
         <a href="../HTML/AgregarPedido.html"><button>Agregar</button></a>

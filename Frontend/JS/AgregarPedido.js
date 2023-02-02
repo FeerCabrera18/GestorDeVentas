@@ -66,9 +66,8 @@ function registro(){
         fecha: form.elements['fecha_pedido'].value,
         nro_comprobante: form.elements['comprobante'].value,
         total_pedido: form.elements['total_pedido'].value,
-        cliente: form.elements['optionclient'].value,
-        detalle_pedidos: form.elements['lista_productos'].value,
-        detalle_pedidos: form.elements['lista_servicios'].value
+        cliente: form.elements['optionclient'].value
+        
     };
     const response = fetch(link, {
         method: 'POST',
