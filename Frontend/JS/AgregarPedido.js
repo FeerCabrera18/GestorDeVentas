@@ -7,7 +7,7 @@ function cargarCliente(clientes){
         const valor = new Date().getTime();
         option.value = cliente.id;
         if(cliente.empresa == false){
-            option.text = cliente.nombre;
+            option.text = cliente.nombre +" "+ cliente.apellido;
         }else{
             option.text = cliente.razon_social;
         }
@@ -65,9 +65,8 @@ function registro(){
     const data = {
         fecha: form.elements['fecha_pedido'].value,
         nro_comprobante: form.elements['comprobante'].value,
-        empresa_emisora: form.elements['empresa_emisora'].value,
         total_pedido: form.elements['total_pedido'].value,
-        cliente: form.elements['lista_clientes'].value,
+        cliente: form.elements['optionclient'].value,
         detalle_pedidos: form.elements['lista_productos'].value,
         detalle_pedidos: form.elements['lista_servicios'].value
     };

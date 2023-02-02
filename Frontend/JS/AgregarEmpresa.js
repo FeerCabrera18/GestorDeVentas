@@ -26,7 +26,7 @@ function registro(){
     })
         .then(response => response.json())
         .then(data => console.log(data))
-
+        window.location.href = "../HTML/ListaClientes.html";
     alert("Cliente registrado");
 }
 registroBtn.addEventListener("click", registro);

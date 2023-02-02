@@ -20,6 +20,12 @@
     <div class="container">
         <form id="registroPedido">
             <h1>Registrar pedido</h1>
+            <div class="cliente_pedido">
+                <label for="lista_clientes">Clientes:</label>
+                <select id="lista_clientes" class="select-css">
+                    <option value="">Seleccione un cliente</option>
+                </select>
+            </div><br>
             <input 
                 type="date" 
                 placeholder=""
@@ -32,30 +38,20 @@
                 required>
             <input 
                 type="text" 
-                placeholder="Empresa emisora"
-                id="empresa_emisora"
-                required>
-            <input 
-                type="text" 
                 placeholder="Total pedido"
                 id="total_pedido"
                 required>
-            <div class="cliente_pedido">
-                <label for="lista_clientes">Clientes:</label>
-                <select id="lista_clientes">
-                    <option value="">Seleccione un cliente</option>
-                </select>
-            </div><br>
+            
             <div class="producto_pedido">
-                <label for="lista_productos">Productos:</label>
-                <select multiple id="lista_productos">
-                    <option value="">Seleccione uno o varios productos</option>
+                <p>Productos</p>
+                <select id="lista_productos" class="select-css">
+                    <option value="">Seleccione un producto</option>
                 </select>
-            </div><br>
+            </div>
             <div class="servicio_pedido">
-                <label for="lista_servicios">Servicios:</label>
-                <select multiple id="lista_servicios">
-                    <option value="">Seleccione uno o varios servicios</option>
+                <p>Servicios</p>
+                <select id="lista_servicios" class="select-css">
+                    <option value="">Seleccione un servicio</option>
                 </select>
             </div>
             <a href="ListaPedido.html"><button type="button" id="cancelar">Cancelar</button></a>

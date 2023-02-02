@@ -5,9 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -33,8 +31,6 @@ public class Pedido {
     private LocalDate fecha;
     @Column(name = "nro_comprobante")
     private String nro_comprobante;
-    @Column(name = "empresa_emisora")
-    private String empresa_emisora;
     @Column(name = "total_pedido")
     private BigDecimal total_pedido;
     @ManyToOne(
@@ -44,6 +40,9 @@ public class Pedido {
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-    @ManyToMany
-    Set<Detalle_pedido> detalle_pedidos;
+    @OneToMany(
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.MERGE
+    )
+    List<Detalle_pedido> detalle_pedidos;
 }
