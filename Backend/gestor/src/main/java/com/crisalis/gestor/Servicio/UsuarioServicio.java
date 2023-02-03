@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 import com.crisalis.gestor.Excepcion.personalizado.ElementoVacio;
 import com.crisalis.gestor.Excepcion.personalizado.ErrorCrearUsuario;
 import com.crisalis.gestor.Modelo.Usuario;
-import com.crisalis.gestor.Modelo.dto.UsuarioDTO;
+import com.crisalis.gestor.Modelo.DTO.UsuarioDTO;
 import com.crisalis.gestor.Repositorio.UsuarioRepositorio;
 import org.springframework.stereotype.Service;
 

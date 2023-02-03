@@ -1,6 +1,6 @@
 package com.crisalis.gestor.Modelo;
 
-import com.crisalis.gestor.Modelo.dto.UsuarioDTO;
+import com.crisalis.gestor.Modelo.DTO.UsuarioDTO;
 import lombok.*;
 
 import javax.persistence.*;

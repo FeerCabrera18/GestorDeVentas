@@ -1,9 +1,8 @@
-package com.crisalis.gestor.Modelo.dto;
+package com.crisalis.gestor.Modelo.DTO;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Data;
-import javax.persistence.Column;
 
 @Data
 @Builder

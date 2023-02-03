@@ -1,6 +1,6 @@
 package com.crisalis.gestor.Controlador;
 
-import com.crisalis.gestor.Modelo.dto.UsuarioDTO;
+import com.crisalis.gestor.Modelo.DTO.UsuarioDTO;
 import com.crisalis.gestor.Servicio.UsuarioServicio;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;

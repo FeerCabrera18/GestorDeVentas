@@ -16,6 +16,7 @@ function registro(){
     })
         .then(response => response.json())
         .then(data => console.log(data))
+        window.location.href = "../HTML/ListaImpuestos.html";
 
     alert("Impuesto registrado");
 }
