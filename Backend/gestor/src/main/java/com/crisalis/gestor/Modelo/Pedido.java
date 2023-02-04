@@ -27,18 +27,19 @@ public class Pedido {
             generator = "pedido_secuencia"
     )
     private Long id;
-    @Column(name = "fecha")
-    private LocalDate fecha;
-    @Column(name = "nro_comprobante")
-    private String nro_comprobante;
-    @Column(name = "total_pedido")
-    private BigDecimal total_pedido;
+
     @ManyToOne(
             fetch = FetchType.EAGER,
             optional = false
     )
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
+
+    @Column(name = "fecha")
+    private LocalDate fecha;
+
+    @Column(name = "total_pedido")
+    private BigDecimal total_pedido;
 
     @OneToMany(
             fetch = FetchType.LAZY,

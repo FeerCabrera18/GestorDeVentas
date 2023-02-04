@@ -12,7 +12,6 @@ function mostrar_datos(arr){
         console.log(arr[1]+" "+arr[2])
         return arr[1]+" "+arr[2]
     }
-     
 }
 
 const mostrar_pedido = (Pedidos) => {
@@ -30,12 +29,11 @@ const mostrar_pedido = (Pedidos) => {
         if (producto_id != null) {
             resultados += `<tr>
                             <td>${elemento}</td>
-                            <td>${pedido.nro_comprobante}</td>
                             <td>${pedido.fecha}</td>
                             <td>${pedido.total_pedido}</td>
                             <td><a href="#popup" onclick="verDetalle_Producto(
                                 ${arr1[0].cantidad},
-                                ${arr1[0].precio_unitario},
+                                ${arr1[0].precio_venta},
                                 ${producto_id},
                                 ${arr1[0].servicio}
                                 )">Ver Detalle</a></td>
@@ -48,7 +46,6 @@ const mostrar_pedido = (Pedidos) => {
         }else{
             resultados += `<tr>
             <td>${elemento}</td>
-            <td>${pedido.nro_comprobante}</td>
             <td>${pedido.fecha}</td>
             <td>${pedido.total_pedido}</td>
             <td><a href="#popup" onclick="verDetalle_Servicio(
@@ -73,7 +70,7 @@ fetch(url)
     .catch (error => console.log(error))
 
 
-function verDetalle_Producto(cantidad,precio_unitario,id_producto){
+function verDetalle_Producto(cantidad,precio_venta,id_producto){
     limpiar();
     if (id_producto != null){
         const url_detalle = `http://localhost:8080/producto/obtenerProductoById/${id_producto}`;
@@ -87,7 +84,7 @@ function verDetalle_Producto(cantidad,precio_unitario,id_producto){
         
 
     document.getElementById("id_cantidad").innerHTML = "Cantidad: " + cantidad;
-    document.getElementById("id_precio_venta").innerHTML = "Precio de Venta: " + precio_unitario;
+    document.getElementById("id_precio_venta").innerHTML = "Precio de Venta: " + precio_venta;
 }
 
 

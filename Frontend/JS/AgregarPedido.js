@@ -20,39 +20,26 @@ fetch(url_clientes)
 .then (data => console.log(data))
 .catch (error => console.log(error))
 
-//Obtiene lista de productos
-const url_producto = 'http://localhost:8080/producto/listaProductos'
-function cargarProducto(productos){
-    productos.forEach(producto => {
-        var selector = document.getElementById('lista_productos')
+//Obtiene lista de detalles
+const url_detalle = 'http://localhost:8080/detalle_pedido/listaDetalle_pedido'
+function cargarDetalle(detalles){
+    detalles.forEach(detalle => {
+        var selector = document.getElementById('lista_detalles')
         const option = document.createElement('option');
         const valor = new Date().getTime();
-        option.value = producto.id;
-        option.text = producto.producto;
+        option.value = detalle.id;
+        option.text = detalle.id;
+            // "Producto: " + detalle.producto.producto +" / "+
+            // "Servicio: " + detalle.servicio.servicio +" / "+  
+            // "Cantidad: " + detalle.cantidad +" / "+ 
+            // "Precio de venta: " + detalle.precio_venta +" / "+
+            // "Sub-Total: " + detalle.subtotal
         selector.appendChild(option);
     }
 )}
-fetch(url_producto)
+fetch(url_detalle)
 .then (response => response.json())
-.then (data => cargarProducto(data))
-.then (data => console.log(data))
-.catch (error => console.log(error))
-
-//Obtiene lista de servicios
-const url_servicios = 'http://localhost:8080/servicio/listaServicios'
-function cargarServicio(servicios){
-    servicios.forEach(servicio => {
-        var selector = document.getElementById('lista_servicios')
-        const option = document.createElement('option');
-        const valor = new Date().getTime();
-        option.value = servicio.id;
-        option.text = servicio.servicio;
-        selector.appendChild(option);
-    }
-)}
-fetch(url_servicios)
-.then (response => response.json())
-.then (data => cargarServicio(data))
+.then (data => cargarDetalle(data))
 .then (data => console.log(data))
 .catch (error => console.log(error))
 
@@ -63,11 +50,10 @@ const registroBtn = document.querySelector("#guardar");
 function registro(){ 
     const link = 'http://localhost:8080/pedido/crearPedido'
     const data = {
+        cliente: form.elements['lista_clientes'].value,
         fecha: form.elements['fecha_pedido'].value,
-        nro_comprobante: form.elements['comprobante'].value,
         total_pedido: form.elements['total_pedido'].value,
-        cliente: form.elements['optionclient'].value
-        
+        detalle_pedidos: form.elements['lista_detalles']
     };
     const response = fetch(link, {
         method: 'POST',
@@ -78,14 +64,8 @@ function registro(){
     })
         .then(response => response.json())
         .then(data => console.log(data))
-        window.location.href = "../HTML/ListaProductos.html";
-    alert("Producto registrado");
+        window.location.href = "../HTML/ListaPedido.html";
+    alert("Pedido registrado");
 }
 registroBtn.addEventListener("click", registro);
 
-//Agrega formulario de carga de detalle
-const form1  = document.getElementById('registroPedido');
-const registroBtn1 = document.querySelector("#guardar");
-function agregarDetalle(){
-
-}

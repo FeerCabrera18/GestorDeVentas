@@ -32,7 +32,6 @@ public class PedidoServicioImpl implements PedidoServicio {
         Pedido pedidoExistente = pedidoRepositorio.findById(id)
                 .orElseThrow(() -> new RuntimeException("No existe pedido con ese id"));
         pedidoExistente.setFecha(pedido.getFecha());
-        pedidoExistente.setNro_comprobante(pedido.getNro_comprobante());
         pedidoExistente.setTotal_pedido(pedido.getTotal_pedido());
         pedidoExistente.setCliente(pedido.getCliente());
         return pedidoRepositorio.save(pedidoExistente);

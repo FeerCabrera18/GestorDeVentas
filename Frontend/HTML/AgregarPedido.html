@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Agregar impuestos</title>
+    <title>Agregar pedido</title>
     <link rel="stylesheet" href="../CSS/Inicio.css">
 </head>
 <body style="background-color: #DDD;">
@@ -12,6 +12,7 @@
             <ul>                    
                 <li><a href="ListaClientes.html">Clientes</a></li>
                 <li><a href="ListaPedido.html">Pedidos</a></li>
+                <li><a href="ListaDetalles.html">Detalles</a></li>
                 <li><a href="Bienes.html">Bienes</a></li>
                 <li><a href="ListaImpuestos.html">Impuestos</a></li>
             </ul>
@@ -20,46 +21,29 @@
     <div class="container">
         <form id="registroPedido">
             <h1>Registrar pedido</h1>
-            <div class="cliente_pedido">
-                <label for="lista_clientes">Clientes:</label>
-                <select id="lista_clientes" class="select-css">
-                    <option value="">Seleccione un cliente</option>
-                </select>
-            </div><br>
-            <input 
-                type="date" 
-                placeholder=""
-                id="fecha_pedido"
-                required>
-            <input 
-                type="text" 
-                placeholder="Comprobante N°"
-                id="comprobante"
-                required>
-            <input 
-                type="text" 
-                placeholder="Total pedido"
-                id="total_pedido"
-                required>
-                
-            <hr style="border:2px;"><h3>Detalle</h3>
-            <div class="producto_pedido">
-                <p>Productos</p>
-                <select id="lista_productos" class="select-css">
-                    <option value="">Seleccione un producto</option>
-                </select>
-            </div><br>
-
-            <input type="text" placeholder="Cantidad">
-            <input type="text" placeholder="Precio de venta">
-            <input type="text" placeholder="Sub-total">
-            
-            <div class="servicio_pedido">
-                <p>Servicios</p>
-                <select id="lista_servicios" class="select-css">
-                    <option value="">Seleccione un servicio</option>
-                </select>
-            </div>
+            <form id="formulario_pedido">
+                <div class="cliente_pedido">
+                    <label for="lista_clientes">Clientes:</label>
+                    <select id="lista_clientes" class="select-css">
+                        <option id="lista_clientes" value="">Seleccione un cliente</option>
+                    </select>
+                </div><br>
+                <input 
+                    type="date" 
+                    placeholder=""
+                    id="fecha_pedido"
+                    required>
+                <input 
+                    type="text" 
+                    placeholder="Total pedido"
+                    id="total_pedido"
+                    required>
+                <div class="detalle_pedido">
+                    <label for="lista_detalles">Detalles:</label>
+                    <select id="lista_detalles" class="select-css">
+                        <option id="lista_detalles"value="">Seleccione un detalle</option>
+                    </select>
+                </div><br>
             <a href="ListaPedido.html"><button type="button" id="cancelar">Cancelar</button></a>
             <button type="submit" id="guardar">Guardar</button>
         </form>
