@@ -49,12 +49,15 @@ const registroBtn = document.querySelector("#guardar");
 
 function registro(){ 
     const link = 'http://localhost:8080/pedido/crearPedido'
+    let detalles_pedidos=[]
+    detalles_pedidos.push({"id": form.elements['lista_detalles'].value})
     const data = {
-        cliente: form.elements['lista_clientes'].value,
+        cliente: {"id": parseInt(form.elements['lista_clientes'].value)},
         fecha: form.elements['fecha_pedido'].value,
-        total_pedido: form.elements['total_pedido'].value,
-        detalle_pedidos: form.elements['lista_detalles']
+        total_pedido: parseFloat(form.elements['total_pedido'].value),
+        detalle_pedidos: detalles_pedidos
     };
+    console.log(data)
     const response = fetch(link, {
         method: 'POST',
         body: JSON.stringify(data),
@@ -68,4 +71,3 @@ function registro(){
     alert("Pedido registrado");
 }
 registroBtn.addEventListener("click", registro);
-

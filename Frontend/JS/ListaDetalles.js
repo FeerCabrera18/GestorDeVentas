@@ -5,13 +5,18 @@ let resultados = "";
 const mostrar = (detalles) => {
     detalles.forEach(detalle => {
         validarCamposDetalles(detalle)
-        const obj = detalle.producto;
-        const arr = Object.values(obj)
-        const obj1 = detalle.servicio;
-        const arr1 = Object.values(obj1)
+        var detalleProducto=""
+        var detalleServicio=""
+        if (detalle.producto != "") {
+            detalleProducto=detalle.producto.producto
+        }
+        if (detalle.servicio != "") {
+            detalleServicio=detalle.servicio.servicio
+        }
         resultados += `<tr>
-                            <td>${arr}</td>
-                            <td>${arr1}</td>
+                            <td>${detalle.id}</td>
+                            <td>${detalleProducto}</td>
+                            <td>${detalleServicio}</td>
                             <td>${detalle.cantidad}</td>
                             <td>${detalle.precio_venta}</td>
                             <td>${detalle.subtotal}</td>
@@ -40,6 +45,8 @@ function validarCamposDetalles(detalle) {
 function validar(campo) {
     var cuilvalidado = campo;
     if (cuilvalidado== null) {
+        cuilvalidado = ""
+    } else if(cuilvalidado == undefined){
         cuilvalidado = ""
     }
     return cuilvalidado;
