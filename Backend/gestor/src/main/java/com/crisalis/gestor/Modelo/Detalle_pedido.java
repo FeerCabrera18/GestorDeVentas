@@ -29,9 +29,6 @@ public class Detalle_pedido {
     private Integer cantidad;
     @Column(name = "precio_venta")
     private BigDecimal precio_venta;
-    @Column(name = "subtotal")
-    private BigDecimal subtotal;
-
     @ManyToOne(
             fetch = FetchType.EAGER
     )

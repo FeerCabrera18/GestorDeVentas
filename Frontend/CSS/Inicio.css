@@ -1,10 +1,13 @@
 *{
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    
 }
 
 body {
     background-color: rgb(235, 235, 235);
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(47, 70, 185, 0.802) 0%, rgba(166, 40, 65, 0.776) 100%);
 }
 
 .logo{
@@ -34,6 +37,7 @@ body {
 }
 
 ul{
+    width: auto;
     list-style-type: none;
     background-color: rgb(235,235,235);
     overflow: hidden;
@@ -68,10 +72,14 @@ li a{
 }
 
 li a:hover{
-    background-color: rgb(215,215,215);
+    color: blue;
+    background-color: rgb(255,255,255);
     border-radius: 10px;
 }
 
+.cerrar_sesion:hover{
+    color: red;
+}
 button{
     font-size: 1.25em;
     padding: 10px;
@@ -175,3 +183,4 @@ th{
     border-radius: .3em;
     background-color: #fff;
 }
+

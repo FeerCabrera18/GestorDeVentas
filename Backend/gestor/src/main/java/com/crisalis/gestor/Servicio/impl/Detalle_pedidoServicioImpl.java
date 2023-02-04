@@ -34,7 +34,6 @@ public class Detalle_pedidoServicioImpl implements Detalle_pedidoServicio {
         Detalle_pedido detalle_pedidoExistente = detalle_pedidoRepositorio.findById(detalle_pedido.getId()).get();
         detalle_pedidoExistente.setCantidad(detalle_pedido.getCantidad());
         detalle_pedidoExistente.setPrecio_venta(detalle_pedido.getPrecio_venta());
-        detalle_pedidoExistente.setSubtotal(detalle_pedido.getSubtotal());
         detalle_pedidoExistente.setProducto(detalle_pedido.getProducto());
         detalle_pedidoExistente.setServicio(detalle_pedido.getServicio());
         return detalle_pedidoRepositorio.save(detalle_pedidoExistente);

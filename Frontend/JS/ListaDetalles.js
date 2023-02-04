@@ -16,13 +16,11 @@ const mostrar = (detalles) => {
         resultados += `<tr>
                             <td>${detalle.id}</td>
                             <td>${detalleProducto}</td>
-                            <td>${detalleServicio}</td>
                             <td>${detalle.cantidad}</td>
                             <td>${detalle.precio_venta}</td>
-                            <td>${detalle.subtotal}</td>
                             <td class="text-center">
                             <a id= "btnEditar" class="btn_table" onclick="editarCliente(${detalle.id})">Editar</a>
-                            <a id= "btnBorrar" class="btn_table" onclick="borrarCliente(${detalle.id})">Borrar</a></td>
+                            <a id= "btnBorrar" class="btn_table" onclick="borrarDetalle(${detalle.id})">Borrar</a></td>
                         </tr>`
     })
     contenedor.innerHTML = resultados  
@@ -51,3 +49,13 @@ function validar(campo) {
     }
     return cuilvalidado;
 }
+
+function borrarDetalle(id){
+    const urlBorrar = `http://localhost:8080/detalle_pedido/borrarDetalle_pedido/${id}`
+    fetch(urlBorrar,{ 
+        method: 'DELETE'
+    })
+    .then( res => res.json() )
+    .then( ()=> location.reload())
+    window.location.reload()
+} 

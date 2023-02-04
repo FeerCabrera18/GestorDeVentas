@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Agregar persona</title>
+    <title>Agregar detalle</title>
     <link rel="stylesheet" href="../CSS/Inicio.css">
 </head>
 <body style="background-color: #DDD;">
@@ -19,18 +19,20 @@
         </nav>
     </div>
     <div class="container">
-        <form id="registrocliente">
-            <h1>Registrar cliente</h1>
-            <input type="text" placeholder="Nombre" id="nombre" required>
-            <input type="text" placeholder="Apellido" id="apellido" required>
-            <input type="text" placeholder="DNI" id="DNI" required>
-            <input type="text" placeholder="Dirección" id="direccion" required>
-            <input type="text" placeholder="Email" id="email" required>
-            <input type="text" placeholder="Teléfono" id="telefono" required>
-            <a href="AgregarClientes.html"><button type="button" id="cancelar">Cancelar</button></a>
+        <form id="registrodetalle">
+            <h1>Registrar detalle</h1>
+            <input type="number" placeholder="Cantidad" id="cantidad">
+            <input type="text" placeholder="Precio de venta" id="precio_venta">
+            <div class="producto_pedido">
+                <label for="lista_productos">Productos</label>
+                <select id="lista_productos" class="select-css">
+                    <option value="">Seleccione un producto</option>
+                </select>
+            </div><br>
+            <a href="ListaDetalles.html"><button type="button" id="cancelar">Cancelar</button></a>
             <button type="submit" id="guardar" onsubmit="return validar()">Guardar</button>   
         </form>
     </div> 
-    <script src="../JS/AgregarPersona.js"></script>
+    <script src="../JS/AgregarDetalle.js"></script>
 </body>
 </html>

@@ -12,6 +12,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(47, 70, 185, 0.802) 0%, rgba(166, 40, 65, 0.776) 100%);
 }
 
 @keyframes move {
@@ -38,6 +40,7 @@ body {
     text-align: center;
     margin-top: 30px;
     padding: 1rem;
+    
 }
 
 h1 {

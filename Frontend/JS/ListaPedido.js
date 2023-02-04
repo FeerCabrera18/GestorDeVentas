@@ -22,6 +22,7 @@ const mostrar_pedido = (Pedidos) => {
         const obj1 = pedido.detalle_pedidos;
         const arr1 = Object.values(obj1)
 
+        //const canculo_pedido = precio_venta * cantidad
         const product = arr1[0].producto
         if (product != null) {
             producto_id = product.id
@@ -50,7 +51,7 @@ const mostrar_pedido = (Pedidos) => {
             <td>${pedido.total_pedido}</td>
             <td><a href="#popup" onclick="verDetalle_Servicio(
                 ${arr1[0].cantidad},
-                ${arr1[0].precio_unitario},
+                ${arr1[0].precio_venta},
                 ${arr1[0].servicio.id}
                 )">Ver Detalle</a></td>
             <td class="text-center">
