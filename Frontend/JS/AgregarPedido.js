@@ -28,12 +28,11 @@ function cargarDetalle(detalles){
         const option = document.createElement('option');
         const valor = new Date().getTime();
         option.value = detalle.id;
-        option.text = detalle.id;
-            // "Producto: " + detalle.producto.producto +" / "+
-            // "Servicio: " + detalle.servicio.servicio +" / "+  
-            // "Cantidad: " + detalle.cantidad +" / "+ 
-            // "Precio de venta: " + detalle.precio_venta +" / "+
-            // "Sub-Total: " + detalle.subtotal
+        option.text = 
+            "Producto: " + detalle.producto.producto +" / "+
+            "Cantidad: " + detalle.cantidad +" / "+ 
+            "Precio de venta: " + detalle.precio_venta +" / "+
+            "N°Detalle: " + detalle.id
         selector.appendChild(option);
     }
 )}
