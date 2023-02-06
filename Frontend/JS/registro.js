@@ -19,6 +19,7 @@ function registro(){
     })
         .then(res => res.json())
         .then(data => console.log(data))
+        window.location.href = "../HTML/IniciarSesion.html";
 
     alert("Registro completado");
 }

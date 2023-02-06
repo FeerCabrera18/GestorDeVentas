@@ -18,6 +18,11 @@
             </ul>
         </nav>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          document.getElementById("fecha_pedido").value = new Date().toISOString().substr(0, 10);
+        });
+      </script>
     <div class="container">
         <form id="registroPedido">
             <h1>Registrar pedido</h1>
