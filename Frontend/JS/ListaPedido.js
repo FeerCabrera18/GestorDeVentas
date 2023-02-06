@@ -39,7 +39,6 @@ const mostrar_pedido = (Pedidos) => {
                                 ${arr1[0].servicio}
                                 )">Ver Detalle</a></td>
                             <td class="text-center">
-                            <a class="btn_table" onclick="editarImpuesto(${pedido.id})">Editar</a>
                             <a class="btn_table" onclick="borrarImpuesto(${pedido.id})">Borrar</a></td>
                         </tr>`
             contenedor.innerHTML = resultados
@@ -55,7 +54,6 @@ const mostrar_pedido = (Pedidos) => {
                 ${arr1[0].servicio.id}
                 )">Ver Detalle</a></td>
             <td class="text-center">
-            <a class="btn_table" onclick="editarImpuesto(${pedido.id})">Editar</a>
             <a class="btn_table" onclick="borrarImpuesto(${pedido.id})">Borrar</a></td>
         </tr>`
             contenedor.innerHTML = resultados
@@ -103,3 +101,13 @@ function limpiar(){
     document.getElementById("id_precio_venta").innerHTML = "Precio de Venta: ";
     document.getElementById("id_Producto").innerHTML = "Producto: ";
 }
+
+function borrarImpuesto(id){
+    const urlBorrar = `http://localhost:8080/pedido/borrarPedido/${id}`
+    fetch(urlBorrar,{ 
+        method: 'DELETE'
+    })
+    .then( res => res.json() )
+    .then( ()=> location.reload())
+    window.location.reload()
+}  
